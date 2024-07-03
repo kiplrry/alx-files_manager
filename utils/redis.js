@@ -4,8 +4,7 @@ const { promisify } = require('util');
 class RedisClient {
   constructor() {
     this.client = redis.createClient();
-    this.client.on('error', (error) => console.log(error))
-      .on('connect', () => console.log('wiiiiii'));
+    this.client.on('error', (error) => console.log(error));
   }
 
   isAlive() {
